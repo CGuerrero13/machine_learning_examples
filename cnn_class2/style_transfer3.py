@@ -129,5 +129,5 @@ def get_loss_and_grads_wrapper(x_vec):
 
 final_img = minimize(get_loss_and_grads_wrapper, 10, batch_shape)
 plt.imshow(scale_img(final_img))
-#plt.show()
-plt.savefig('newStyle.jpg')
+plt.show()
+#plt.savefig('newStyle.jpg')
