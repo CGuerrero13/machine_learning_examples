@@ -5,10 +5,12 @@ from builtins import range, input
 # Note: you may need to update your version of future
 # sudo pip install -U future
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
-import keras
-import keras.backend as K
+import tensorflow.compat.v1.keras as keras
+import tensorflow.compat.v1.keras.backend as K
+
+tf.disable_v2_behavior() #code have been written for TF1
 
 def custom_softmax(x):
   m = tf.reduce_max(x, 1)

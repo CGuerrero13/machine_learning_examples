@@ -9,15 +9,16 @@ from builtins import range, input
 # Let's go up to the end of the first conv block
 # to make sure everything has been loaded correctly
 # compared to keras
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import numpy as np
 import matplotlib.pyplot as plt
-import keras
+import tensorflow.compat.v1.keras as keras
 
-from keras.applications.resnet50 import ResNet50
-from keras.models import Model
-from keras.preprocessing import image
-from keras.applications.resnet50 import preprocess_input, decode_predictions
+from tensorflow.compat.v1.keras.applications.resnet50 import ResNet50
+from tensorflow.compat.v1.keras.models import Model
+from tensorflow.compat.v1.keras.preprocessing import image
+from tensorflow.compat.v1.keras.applications.resnet50 import preprocess_input, decode_predictions
 
 from tf_resnet_convblock import ConvLayer, BatchNormLayer, ConvBlock
 
@@ -110,6 +111,7 @@ class PartialResNet:
 
 
 if __name__ == '__main__':
+
   # you can also set weights to None, it doesn't matter
   resnet = ResNet50(weights='imagenet')
 
@@ -120,8 +122,8 @@ if __name__ == '__main__':
     outputs=resnet.layers[16].output
   )
   print(partial_model.summary())
-  # for layer in partial_model.layers:
-  #   layer.trainable = False
+  for layer in partial_model.layers:
+    layer.trainable = False
 
   my_partial_resnet = PartialResNet()
 
@@ -132,9 +134,9 @@ if __name__ == '__main__':
   keras_output = partial_model.predict(X)
 
   # get my model output
+  tf.global_variables_initializer()
   init = tf.variables_initializer(my_partial_resnet.get_params())
-
-  # note: starting a new session messes up the Keras model
+  #- note: starting a new session messes up the Keras model
   session = keras.backend.get_session()
   my_partial_resnet.set_session(session)
   session.run(init)

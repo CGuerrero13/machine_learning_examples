@@ -6,12 +6,14 @@ from builtins import range, input
 # sudo pip install -U future
 
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import matplotlib.pyplot as plt
-
+import pdb
+tf.disable_v2_behavior()
 
 class ConvBlock:
+
   def __init__(self):
     pass
 
@@ -20,16 +22,16 @@ class ConvBlock:
 
 
 if __name__ == '__main__':
-  conv_block = ConvBlock()
 
+  conv_block = ConvBlock()
 
   # make a fake image
   X = np.random.random((1, 224, 224, 3))
-
-  init = tf.global_variables_initializer()
+  #init = tf.compat.v1.global_variables_initializer()
+  init = tf.global_variables_initializer() #old version
   with tf.Session() as session:
     conv_block.session = session
     session.run(init)
-
-    output = conv_block.predict(X):
+    pdb.set_trace()
+    output = conv_block.predict(X)
     print("output.shape:", output.shape)

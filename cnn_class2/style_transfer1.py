@@ -3,30 +3,35 @@
 
 from __future__ import print_function, division
 from builtins import range, input
+import pdb
 # Note: you may need to update your version of future
 # sudo pip install -U future
 
 # In this script, we will focus on generating the content
 # E.g. given an image, can we recreate the same image
 
-from keras.layers import Input, Lambda, Dense, Flatten
-from keras.layers import AveragePooling2D, MaxPooling2D
-from keras.layers.convolutional import Conv2D
-from keras.models import Model, Sequential
-from keras.applications.vgg16 import VGG16
-from keras.applications.vgg16 import preprocess_input
-from keras.preprocessing import image
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+#pdb.set_trace()
 
-import keras.backend as K
+from tensorflow.keras.layers import Input, Lambda, Dense, Flatten
+from tensorflow.keras.layers import AveragePooling2D, MaxPooling2D, Conv2D
+#from tensorflow.keras.layers.convolutional import Conv2D
+from tensorflow.keras.models import Model, Sequential
+from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.preprocessing import image
+
+import tensorflow.keras.backend as K
 import numpy as np
 import matplotlib.pyplot as plt
 
 from scipy.optimize import fmin_l_bfgs_b
 
 
-import tensorflow as tf
-if tf.__version__.startswith('2'):
-  tf.compat.v1.disable_eager_execution()
+
+'''if tf.__version__.startswith('2'):
+  tf.compat.v1.disable_eager_execution()'''
 
 
 def VGG16_AvgPool(shape):
@@ -34,13 +39,13 @@ def VGG16_AvgPool(shape):
   # so get rid of the maxpool which throws away information
   vgg = VGG16(input_shape=shape, weights='imagenet', include_top=False)
 
-  # new_model = Sequential()
-  # for layer in vgg.layers:
-  #   if layer.__class__ == MaxPooling2D:
-  #     # replace it with average pooling
-  #     new_model.add(AveragePooling2D())
-  #   else:
-  #     new_model.add(layer)
+  '''new_model = Sequential()
+  for layer in vgg.layers:
+  if layer.__class__ == MaxPooling2D:
+    # replace it with average pooling
+    new_model.add(AveragePooling2D())
+  else:
+    new_model.add(layer)'''
 
   i = vgg.input
   x = i
@@ -116,8 +121,8 @@ if __name__ == '__main__':
   shape = x.shape[1:]
 
   # see the image
-  # plt.imshow(img)
-  # plt.show()
+  plt.imshow(img)
+  plt.show()
 
 
   # make a content model

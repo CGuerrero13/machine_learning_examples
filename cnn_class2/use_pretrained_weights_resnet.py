@@ -6,12 +6,12 @@ from builtins import range, input
 # Note: you may need to update your version of future
 # sudo pip install -U future
 
-from keras.layers import Input, Lambda, Dense, Flatten
-from keras.models import Model
-from keras.applications.resnet50 import ResNet50, preprocess_input
+from tensorflow.keras.layers import Input, Lambda, Dense, Flatten
+from tensorflow.keras.models import Model
+from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
 # from keras.applications.inception_v3 import InceptionV3, preprocess_input
-from keras.preprocessing import image
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 from sklearn.metrics import confusion_matrix
 import numpy as np
@@ -28,14 +28,14 @@ epochs = 16
 batch_size = 32
 
 # https://www.kaggle.com/paultimothymooney/blood-cells
-train_path = '../large_files/blood_cell_images/TRAIN'
-valid_path = '../large_files/blood_cell_images/TEST'
+#train_path = '../large_files/blood_cell_images/TRAIN'
+#valid_path = '../large_files/blood_cell_images/TEST'
 
 # https://www.kaggle.com/moltean/fruits
 # train_path = '../large_files/fruits-360/Training'
 # valid_path = '../large_files/fruits-360/Validation'
-# train_path = '../large_files/fruits-360-small/Training'
-# valid_path = '../large_files/fruits-360-small/Validation'
+train_path = '../large_files/fruits-360-small/Training'
+valid_path = '../large_files/fruits-360-small/Validation'
 
 # useful for getting number of files
 image_files = glob(train_path + '/*/*.jp*g')

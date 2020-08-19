@@ -6,8 +6,8 @@ from builtins import range
 # Note: you may need to update your version of future
 # sudo pip install -U future
 
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Conv2D, MaxPooling2D, Flatten, Dropout, BatchNormalization
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Conv2D, MaxPooling2D, Flatten, Dropout, BatchNormalization
 
 import matplotlib.pyplot as plt
 import pandas as pd

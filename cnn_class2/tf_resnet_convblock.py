@@ -6,16 +6,18 @@ from builtins import range, input
 # sudo pip install -U future
 
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import matplotlib.pyplot as plt
 
+tf.disable_v2_behavior()
 
 def init_filter(d, mi, mo, stride):
   return (np.random.randn(d, d, mi, mo) * np.sqrt(2.0 / (d * d * mi))).astype(np.float32)
 
 
 class ConvLayer:
+
   def __init__(self, d, mi, mo, stride=2, padding='VALID'):
     self.W = tf.Variable(init_filter(d, mi, mo, stride))
     self.b = tf.Variable(np.zeros(mo, dtype=np.float32))

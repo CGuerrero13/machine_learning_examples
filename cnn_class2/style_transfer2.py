@@ -11,10 +11,10 @@ from builtins import range, input
 # But NOT the same content.
 # It should capture only the essence of the style.
 
-from keras.models import Model, Sequential
-from keras.applications.vgg16 import preprocess_input
-from keras.preprocessing import image
-from keras.applications.vgg16 import VGG16
+from tensorflow.keras.models import Model, Sequential
+from tensorflow.keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.vgg16 import VGG16
 
 from style_transfer1 import VGG16_AvgPool, unpreprocess, scale_img
 # from skimage.transform import resize
@@ -23,7 +23,7 @@ from datetime import datetime
 
 import numpy as np
 import matplotlib.pyplot as plt
-import keras.backend as K
+import tensorflow.keras.backend as K
 
 
 

@@ -9,16 +9,17 @@ from builtins import range, input
 # Let's go up to the end of the first conv block
 # to make sure everything has been loaded correctly
 # compared to keras
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import numpy as np
 import matplotlib.pyplot as plt
-import keras
+import tensorflow.compat.v1.keras as keras
 
-from keras.applications.resnet50 import ResNet50
-from keras.models import Model
-from keras.preprocessing import image
-from keras.layers import Dense
-from keras.applications.resnet50 import preprocess_input, decode_predictions
+from tensorflow.compat.v1.keras.applications.resnet50 import ResNet50
+from tensorflow.compat.v1.keras.models import Model
+from tensorflow.compat.v1.keras.preprocessing import image
+from tensorflow.compat.v1.keras.layers import Dense
+from tensorflow.compat.v1.keras.applications.resnet50 import preprocess_input, decode_predictions
 
 from tf_resnet_convblock import ConvLayer, BatchNormLayer, ConvBlock
 from tf_resnet_identity_block import IdentityBlock

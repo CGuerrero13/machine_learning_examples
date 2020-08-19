@@ -13,16 +13,16 @@ from builtins import range, input
 # We accomplish this by balancing the content loss
 # and style loss simultaneously.
 
-from keras.layers import Input, Lambda, Dense, Flatten
-from keras.layers import AveragePooling2D, MaxPooling2D
-from keras.layers.convolutional import Conv2D
-from keras.models import Model, Sequential
-from keras.applications.vgg16 import VGG16
-from keras.applications.vgg16 import preprocess_input
-from keras.preprocessing import image
+from tensorflow.keras.layers import Input, Lambda, Dense, Flatten
+from tensorflow.keras.layers import AveragePooling2D, MaxPooling2D, Conv2D
+#from tensorflow.keras.layers.convolutional import Conv2D
+from tensorflow.keras.models import Model, Sequential
+from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.preprocessing import image
 from skimage.transform import resize
 
-import keras.backend as K
+import tensorflow.keras.backend as K
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -47,7 +47,7 @@ def load_img_and_preprocess(path, shape=None):
 content_img = load_img_and_preprocess(
   # '../large_files/caltech101/101_ObjectCategories/elephant/image_0002.jpg',
   # 'batman.jpg',
-  'content/sydney.jpg',
+  'content/karluky_paris.jpg',
   # (225, 300),
 )
 
