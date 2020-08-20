@@ -1,6 +1,13 @@
 # https://deeplearningcourses.com/c/advanced-computer-vision
 # https://www.udemy.com/advanced-computer-vision
 
+'''
+
+IMPORTANT: this script has a Jupyter notebook in Google Colab and works well.
+
+
+'''
+
 from __future__ import print_function, division
 from builtins import range, input
 # Note: you may need to update your version of future

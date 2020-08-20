@@ -6,9 +6,9 @@ from builtins import range, input
 # Note: you may need to update your version of future
 # sudo pip install -U future
 
-from keras.models import Model
-from keras.applications.resnet50 import ResNet50, preprocess_input, decode_predictions
-from keras.preprocessing import image
+from tensorflow.keras.models import Model
+from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input, decode_predictions
+from tensorflow.keras.preprocessing import image
 
 import numpy as np
 import scipy as sp
@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 
 from glob import glob
 
-
+import pdb
 
 # get the image files
 # http://www.vision.caltech.edu/Image_Datasets/Caltech101/
@@ -26,9 +26,9 @@ image_files += glob('../large_files/101_ObjectCategories/*/*.jp*g')
 
 
 
-# look at an image for fun
-plt.imshow(image.load_img(np.random.choice(image_files)))
-plt.show()
+#- look at an image for fun
+#plt.imshow(image.load_img(np.random.choice(image_files)))
+#plt.show()
 
 
 # add preprocessing layer to the front of VGG
@@ -39,13 +39,17 @@ resnet = ResNet50(input_shape=(224, 224, 3), weights='imagenet', include_top=Tru
 resnet.summary()
 
 # make a model to get output before flatten
-activation_layer = resnet.get_layer('activation_49')
+
+#activation_layer = resnet.get_layer('activation_49')
+activation_layer = resnet.get_layer('conv5_block3_out')
 
 # create a model object
 model = Model(inputs=resnet.input, outputs=activation_layer.output)
 
 # get the feature map weights
-final_dense = resnet.get_layer('fc1000')
+#final_dense = resnet.get_layer('fc1000')
+final_dense = resnet.get_layer('predictions')
+
 W = final_dense.get_weights()[0]
 
 
