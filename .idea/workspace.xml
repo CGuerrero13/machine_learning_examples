@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce08f9c-98dc-4c26-9cac-057f3f9272ef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cnn_class2/class_activation_maps.py" afterPath="$PROJECT_DIR$/cnn_class2/class_activation_maps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cnn_class2/style_transfer3.py" afterPath="$PROJECT_DIR$/cnn_class2/style_transfer3.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ann_class2/keras_example.py" afterPath="$PROJECT_DIR$/ann_class2/keras_example.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ann_class2/keras_functional.py" afterPath="$PROJECT_DIR$/ann_class2/keras_functional.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ann_class2/util.py" afterPath="$PROJECT_DIR$/ann_class2/util.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +18,7 @@
       <file leaf-file-name="style_transfer3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cnn_class2/style_transfer3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="-135">
               <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="e#201#248#0" expanded="true" />
@@ -26,14 +27,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class_activation_maps.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cnn_class2/class_activation_maps.py">
+      <file leaf-file-name="keras_example.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ann_class2/keras_example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="695">
+              <caret line="74" column="10" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="74" selection-end-column="10" />
               <folding>
-                <element signature="e#111#158#0" expanded="true" />
+                <element signature="e#156#203#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="keras_functional.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ann_class2/keras_functional.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-59">
+              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,6 +91,9 @@
         <option value="$PROJECT_DIR$/cnn_class2/tf_resnet_first_layers.py" />
         <option value="$PROJECT_DIR$/cnn_class2/style_transfer3.py" />
         <option value="$PROJECT_DIR$/cnn_class2/class_activation_maps.py" />
+        <option value="$PROJECT_DIR$/ann_class2/keras_example.py" />
+        <option value="$PROJECT_DIR$/ann_class2/util.py" />
+        <option value="$PROJECT_DIR$/ann_class2/keras_functional.py" />
       </list>
     </option>
   </component>
@@ -115,7 +129,7 @@
             <path>
               <item name="machine_learning_examples" type="b2602c69:ProjectViewProjectNode" />
               <item name="machine_learning_examples" type="462c0819:PsiDirectoryNode" />
-              <item name="cnn_class2" type="462c0819:PsiDirectoryNode" />
+              <item name="ann_class2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="machine_learning_examples" type="b2602c69:ProjectViewProjectNode" />
@@ -163,7 +177,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -286,20 +299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ann_class2/tensorflow2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ann_class2/tensorflow1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ann_class2/theano_ann.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1244">
@@ -308,20 +307,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ann_class2/pytorch_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ann_class2/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ann_class2/keras_example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -440,16 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cnn_class2/style_transfer3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#201#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cnn_class2/test_softmax.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -474,12 +449,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ann_class2/tensorflow1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="65" column="19" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+          <folding>
+            <element signature="e#471#518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cnn_class2/style_transfer3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#201#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ann_class2/tensorflow2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#387#434#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ann_class2/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cnn_class2/class_activation_maps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="e#111#158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ann_class2/keras_functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ann_class2/keras_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="74" column="10" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="74" selection-end-column="10" />
+          <folding>
+            <element signature="e#156#203#0" expanded="true" />
           </folding>
         </state>
       </provider>

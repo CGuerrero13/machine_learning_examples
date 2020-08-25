@@ -5,8 +5,8 @@ from builtins import range
 # Note: you may need to update your version of future
 # sudo pip install -U future
 
-from keras.models import Sequential
-from keras.layers import Dense, Activation
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation
 from util import get_normalized_data, y2indicator
 
 import matplotlib.pyplot as plt
